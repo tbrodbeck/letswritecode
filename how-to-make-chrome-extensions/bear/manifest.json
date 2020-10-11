@@ -5,7 +5,8 @@
   "content_scripts": [
     {
       "matches": [
-        "https://cloud.ibm.com/login"
+        "https://cloud.ibm.com/login",
+        "https://w3id.sso.ibm.com/auth/sps/auth?FedName=samlidp2&FedId=uuid564ae2bf-0164-149c-8dbf-bedb46020ff9"
       ],
       "js": [
         "content.js"
