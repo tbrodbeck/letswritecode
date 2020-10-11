@@ -1,14 +1,11 @@
-//alert('Grrr.')
-// chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
-//   const re = new RegExp('bear', 'gi')
-//   const matches = document.documentElement.innerHTML.match(re)
-//   sendResponse({count: matches.length})
-// })
-
-const re = new RegExp('bear', 'gi')
-const matches = document.documentElement.innerHTML.match(re) || []
-
-chrome.runtime.sendMessage({
-  url: window.location.href,
-  count: matches.length
-})
+let stateCheck = setInterval(() => {
+  if (document.readyState === "complete") {
+    clearInterval(stateCheck);
+    console.log("clicking ibm cloud button...");
+    document
+      .querySelector(
+        "body > main > div.ibm-cloud-app.ibm-cloud-react-container > div > div > div.login-wrapper > form.login-form > div.login-form__input-rows > div.login-form__realm-user-id-row > div.login-form__user-id-wrapper.login-form__fluid-input-label.login-form__fluid-input-label--align-top > div.login-form__login-button-wrapper > button"
+      )
+      .click();
+  }
+}, 2000);
