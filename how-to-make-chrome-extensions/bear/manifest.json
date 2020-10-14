@@ -6,7 +6,8 @@
     {
       "matches": [
         "https://cloud.ibm.com/login",
-        "https://w3id.sso.ibm.com/auth/sps/auth?FedName=samlidp2&FedId=uuid564ae2bf-0164-149c-8dbf-bedb46020ff9"
+        "https://studip.uni-osnabrueck.de/",
+        "https://w3id.sso.ibm.com/pkmslogin.form?token=Unknown"
       ],
       "js": [
         "content.js"
